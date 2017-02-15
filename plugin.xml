@@ -10,6 +10,8 @@
     <repo>https://github.com/driftyco/cordova-plugin-template.git</repo>
     <issue>https://github.com/driftyco/cordova-plugin-template/issues</issue>
 
+    <dependency id="cordova-plugin-cocoapod-support"/>
+
     <!-- android -->
     <platform name="android">
       <js-module src="www/plugin.js" name="plugin">
@@ -37,9 +39,11 @@
         <config-file target="config.xml" parent="/*">
             <feature name="MyCordovaPlugin">
                 <param name="ios-package" value="MyCordovaPlugin" onload="true" />
-            </feature>
+            </feature>`
         </config-file>
-        <framework src="SVProgressHUD" type="podspec" spec="~> 1.0.0" />
         <source-file src="src/ios/CordovaProgressIndicatorPlugin.swift" />
+        <pods-config ios-min-version="9.0" use-frameworks="true">
+        </pods-config>
+        <pod id="LatestPod" />
     </platform>
 </plugin>
