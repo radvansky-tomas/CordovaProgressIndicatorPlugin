@@ -44,6 +44,6 @@
         <source-file src="src/ios/CordovaProgressIndicatorPlugin.swift" />
         <pods-config ios-min-version="9.0" use-frameworks="true">
         </pods-config>
-        <pod id="LatestPod" />
+        <pod id="SVProgressHUD" />
     </platform>
 </plugin>
