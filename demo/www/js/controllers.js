@@ -52,5 +52,16 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('PlaylistCtrl', function($scope, $stateParams,$ionicPlatform) {
+  $scope.show = function () {
+    $ionicPlatform.ready(function() {
+      CordovaProgressIndicatorPlugin.show();
+    });
+  };
+
+  $scope.hide = function () {
+    $ionicPlatform.ready(function() {
+      CordovaProgressIndicatorPlugin.hide();
+    });
+  };
 });

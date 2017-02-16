@@ -1,18 +1,10 @@
-cordova.define("cordova-progress-indicator-plugin.plugin", function(require, exports, module) {
+var exec = require('cordova/exec');
+var PLUGIN_NAME = 'CordovaProgressIndicatorPlugin';
 
-    var exec = require('cordova/exec');
+exports.show = function(arg0, success, error) {
+    exec(success, error, PLUGIN_NAME, 'show', [arg0]);
+};
 
-    var PLUGIN_NAME = 'CordovaProgressIndicatorPlugin';
-
-    var CordovaProgressIndicatorPlugin = {
-        show: function(message) {
-            exec(cb, null, PLUGIN_NAME, 'show', [message]);
-        },
-        hide: function(cb) {
-            exec(cb, null, PLUGIN_NAME, 'hide', []);
-        }
-    };
-
-    module.exports = CordovaProgressIndicatorPlugin;
-
-});
+exports.hide = function( success, error) {
+    exec(success, error, PLUGIN_NAME, 'hide', []);
+};
