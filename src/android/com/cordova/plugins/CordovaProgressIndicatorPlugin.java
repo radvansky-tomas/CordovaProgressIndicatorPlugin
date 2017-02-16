@@ -38,9 +38,18 @@ public class CordovaProgressIndicatorPlugin extends CordovaPlugin {
             dialog = new ACProgressFlower.Builder(this.cordova.getActivity())
                     .direction(ACProgressConstant.DIRECT_CLOCKWISE)
                     .themeColor(Color.WHITE)
-                    .text(message)
                     .fadeColor(Color.DKGRAY).build();
             dialog.setCanceledOnTouchOutside(false);
+            dialog.setCancelable(false);
+
+            if (message!=null)
+            {
+                if (!message.isEmpty())
+                {
+                    dialog.setTitle(message);
+                }
+            }
+
             dialog.show();
             final PluginResult result = new PluginResult(PluginResult.Status.OK);
             callbackContext.sendPluginResult(result);
