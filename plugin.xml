@@ -18,27 +18,27 @@
         <runs/>
 
         <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
-        <clobbers target="MyCordovaPlugin" />
+        <clobbers target="CordovaProgressIndicatorPlugin" />
       </js-module>
       <config-file target="res/xml/config.xml" parent="/*">
-        <feature name="MyCordovaPlugin">
-          <param name="android-package" value="com.example.MyCordovaPlugin" />
+        <feature name="CordovaProgressIndicatorPlugin">
+          <param name="android-package" value="com.cordova,plugins.CordovaProgressIndicatorPlugin" />
           <param name="onload" value="true" />
         </feature>
       </config-file>
 
-      <source-file src="src/android/com/example/MyCordovaPlugin.java" target-dir="src/com/example/" />
+      <source-file src="src/android/com/cordova/plugins/CordovaProgressIndicatorPlugin.java" target-dir="src/com/cordova/plugins/" />
     </platform>
 
     <!-- ios -->
     <platform name="ios">
         <js-module src="www/plugin.js" name="plugin">
             <runs/>
-            <clobbers target="MyCordovaPlugin" />
+            <clobbers target="CordovaProgressIndicatorPlugin" />
         </js-module>
         <config-file target="config.xml" parent="/*">
-            <feature name="MyCordovaPlugin">
-                <param name="ios-package" value="MyCordovaPlugin" onload="true" />
+            <feature name="CordovaProgressIndicatorPlugin">
+                <param name="ios-package" value="CordovaProgressIndicatorPlugin" onload="true" />
             </feature>`
         </config-file>
         <source-file src="src/ios/CordovaProgressIndicatorPlugin.swift" />
