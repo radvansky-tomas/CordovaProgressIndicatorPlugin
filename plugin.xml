@@ -25,7 +25,7 @@
                 <param name="onload" value="true"/>
             </feature>
         </config-file>
-
+        <framework src="cc.cloudist.acplibrary:library:1.2.1" />
         <source-file src="src/android/com/cordova/plugins/CordovaProgressIndicatorPlugin.java"
                      target-dir="src/com/cordova/plugins/"/>
     </platform>
