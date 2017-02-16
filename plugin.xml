@@ -10,6 +10,7 @@
     <repo>https://github.com/driftyco/cordova-plugin-template.git</repo>
     <issue>https://github.com/driftyco/cordova-plugin-template/issues</issue>
 
+    <dependency id="cordova-plugin-add-swift-support" version="1.6.1"/>
     <dependency id="cordova-plugin-cocoapod-support"/>
 
     <js-module name="CordovaProgressIndicatorPlugin" src="www/plugin.js">

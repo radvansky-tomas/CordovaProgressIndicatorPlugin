@@ -7,11 +7,14 @@ import SVProgressHUD
         let pluginResult = CDVPluginResult(
             status: CDVCommandStatus_OK
         )
+        //Disable interaction
+        SVProgressHUD.setDefaultMaskType(.black)
 
         let msg = command.arguments[0] as? String ?? ""
 
         if msg.characters.count == 0{
             SVProgressHUD.show()
+
         }
         else
         {
@@ -23,4 +26,19 @@ import SVProgressHUD
             callbackId: command.callbackId
         )
     }
+
+    @objc(hide:)
+    func hide(command: CDVInvokedUrlCommand) {
+        let pluginResult = CDVPluginResult(
+            status: CDVCommandStatus_OK
+        )
+
+        SVProgressHUD.dismiss()
+
+        self.commandDelegate!.send(
+            pluginResult,
+            callbackId: command.callbackId
+        )
+    }
+
 }
