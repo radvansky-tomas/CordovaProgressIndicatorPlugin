@@ -16,6 +16,7 @@ Plugin is exposing following SVProgressHUD methods:
 + (void)show;
 + (void)showWithStatus:(NSString*)string;
 + (void)dismiss;
++ (bool)isShown;
 
 Methods are exposed inside swift file, which was possible due to:
 https://www.npmjs.com/package/cordova-plugin-add-swift-support
@@ -30,3 +31,4 @@ Library is installed as Gradle dependency using cordova native framework declara
 Plugins is exposing following ACProgressLite method:
 + (void)show;
 + (void)dismiss;
++ (bool)isShown;
