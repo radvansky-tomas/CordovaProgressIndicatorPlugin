@@ -41,4 +41,12 @@ import SVProgressHUD
         )
     }
 
+      @objc(isShown:)
+        func isShown(command: CDVInvokedUrlCommand) {
+            self.commandDelegate!.send(
+                CDVPluginResult.init(status: CDVCommandStatus_OK, messageAs: SVProgressHUD.isVisible()),
+                callbackId: command.callbackId
+            )
+        }
+
 }

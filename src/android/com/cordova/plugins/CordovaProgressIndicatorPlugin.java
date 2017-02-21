@@ -62,6 +62,14 @@ public class CordovaProgressIndicatorPlugin extends CordovaPlugin {
             final PluginResult result = new PluginResult(PluginResult.Status.OK);
             callbackContext.sendPluginResult(result);
         }
+        else if (action.equals("isShown")) {
+                    boolean isShowning =  false;
+                    if (dialog != null) {
+                        isShowning = dialog.isShowing();
+                    }
+                    final PluginResult result = new PluginResult(PluginResult.Status.OK, isShowning);
+                    callbackContext.sendPluginResult(result);
+        }
         return true;
     }
 

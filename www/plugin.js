@@ -8,3 +8,7 @@ exports.show = function(arg0, success, error) {
 exports.hide = function( success, error) {
     exec(success, error, PLUGIN_NAME, 'hide', []);
 };
+
+exports.isShown = function( success, error) {
+    exec(success, error, PLUGIN_NAME, 'isShown', []);
+};

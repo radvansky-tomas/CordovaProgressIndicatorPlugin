@@ -1,11 +1,11 @@
 {
-  "name": "cordova-plugin-template",
-  "version": "1.0.0",
+  "name": "cordova-progress-indicator-plugin",
+  "version": "1.0.1",
   "cordova": {
-    "id": "cordova-plugin-template",
+    "id": "cordova-progress-indicator-plugin",
     "platforms": [
       "android",
-      "ios",
+      "ios"
     ]
   },
   "description": "A starting point for a Cordova Plugin"

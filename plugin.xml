@@ -2,13 +2,13 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="cordova-progress-indicator-plugin"
-        version="1.0.0">
+        version="1.0.1">
     <name>Cordova Progress Indicator Plugin</name>
-    <description></description>
+    <description>Cordova Plugin allowing to show native progress indicators of different types.</description>
     <license>MIT</license>
-    <keywords></keywords>
-    <repo>https://github.com/driftyco/cordova-plugin-template.git</repo>
-    <issue>https://github.com/driftyco/cordova-plugin-template/issues</issue>
+    <keywords>ios, android, cordova, plugin, indicator</keywords>
+    <repo>https://github.com/radvansky-tomas/CordovaProgressIndicatorPlugin.git</repo>
+    <issue>https://github.com/radvansky-tomas/CordovaProgressIndicatorPlugin/issues</issue>
 
     <dependency id="cordova-plugin-add-swift-support" version="1.6.1"/>
     <dependency id="cordova-plugin-cocoapod-support"/>
